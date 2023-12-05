@@ -7,16 +7,7 @@ class Pet {
   }
 
   hasTheSameOwnerOf(otherPet) {
-    return this.ownerName === otherPet.ownerName
-      ? "Yes, " + this.ownerName + " is their owner"
-      : "No, " +
-          this.ownerName +
-          " is the owner of " +
-          this.petName +
-          ", while " +
-          otherPet.ownerName +
-          " is the owner of " +
-          otherPet.petName;
+    return this.ownerName === otherPet.ownerName;
   }
 }
 
