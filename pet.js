@@ -20,6 +20,8 @@ console.log(pet3);
 console.log(pet1.hasTheSameOwnerOf(pet2));
 console.log(pet1.hasTheSameOwnerOf(pet3));
 
+const pets = [];
+
 document.querySelector("button").addEventListener("click", function () {
   const petName = document.getElementById("petName").value;
   document.getElementById("petName").value = "";
@@ -30,6 +32,8 @@ document.querySelector("button").addEventListener("click", function () {
   const breed = document.getElementById("breed").value;
   document.getElementById("breed").value = "";
   const newPet = new Pet(petName, ownerName, species, breed);
+  pets.push(newPet);
+  console.log(pets);
   const newLi = document.createElement("li");
   newLi.innerHTML = `<span class="fw-medium">${newPet.petName}</span> è un <span class="fw-medium">${newPet.species}</span> di razza <span class="fw-medium">${newPet.breed}</span> di proprietà di <span class="fw-medium">${newPet.ownerName}</span>`;
   document.querySelector("ul").appendChild(newLi);
